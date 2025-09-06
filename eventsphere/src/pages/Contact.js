@@ -171,7 +171,7 @@ export default function Contact() {
                 </div>
                 <div className="info-content">
                   <h3 className="info-title">Email Us</h3>
-                  <p className="info-text">Internshippakistan.career@gmail.com</p>
+                  <p className="info-text">eventsphere.events@gmail.com</p>
                 </div>
               </div>
 

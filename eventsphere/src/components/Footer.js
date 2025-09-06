@@ -11,7 +11,7 @@ export default function Footer() {
             Discover and create amazing events in your city. Connect with like-minded people and experience unforgettable moments.
           </p>
           <div className="footer-contact">
-            <p>Internshippakistan.career@gmail.com</p>
+           <p>eventsphere.events@gmail.com</p>
           </div>
         </div>
         
@@ -59,7 +59,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p className="footer-contact">Internshippakistan.career@gmail.com</p>
+          <p className="footer-contact">eventsphere.events@gmail.com</p>
         </div>
       </div>
       

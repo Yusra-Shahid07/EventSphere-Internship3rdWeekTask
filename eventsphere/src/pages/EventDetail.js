@@ -1,81 +1,3 @@
-// import React from "react";
-// import "./EventDetail.css";
-// import { useLocation, useNavigate } from "react-router-dom";
-// export default function EventDetail() {
-//   const location = useLocation();
-//   const navigate = useNavigate();
-//   const eventData = location.state;
-//   const goHome = () => {
-//     navigate("/");
-//   };
-
-//   const registerEvent = () => {
-//     alert("✅ RSVP button clicked!");
-//   };
-//   return (
-//     <div>
-//       <div id="eventDetail" className="event-detail">
-//         <div className="detail-container">
-//           <button className="back-btn" onClick={goHome}>
-//             ← Back to Home
-//           </button>
-//           <div className="detail-header glass">
-//             <div className="detail-banner" id="detailBanner">
-//               {eventData.icon}
-//             </div>
-//             <h1 className="detail-title" id="detailTitle">
-//               {eventData.name}
-//             </h1>
-//             <div className="detail-meta">
-//               <div className="meta-item">
-//                 📅 <span id="detailDate">{eventData.date}</span>
-//               </div>
-//               <div className="meta-item">
-//                 📍 <span id="detailVenue">{eventData.venue}</span>
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="detail-content glass">
-//             <div className="detail-description" id="detailDescription">
-//               Full event description will appear here...
-//             </div>
-
-        
-//             <div className="map-container">
-//               {eventData.venue.toLowerCase().includes("online") ||
-//               eventData.venue.toLowerCase().includes("zoom") ||
-//               eventData.venue.toLowerCase().includes("meet") ||
-//               eventData.venue.toLowerCase().includes("virtual") ? (
-//                 <p>
-//                   🌐 This is a virtual event. No physical location map
-//                   available.
-//                 </p>
-//               ) : (
-//                 <iframe
-//                   title="event-location"
-//                   width="100%"
-//                   height="300"
-//                   style={{ border: 0, borderRadius: "12px" }}
-//                   loading="lazy"
-//                   allowFullScreen
-//                   src={`https://www.google.com/maps?q=${encodeURIComponent(
-//                     eventData.venue
-//                   )}&output=embed`}
-//                 ></iframe>
-//               )}
-//             </div>
-//             <button className="rsvp-btn" onClick={registerEvent}>
-//               RSVP / Register Now
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
 
 import React, { useState } from "react";
 import "./EventDetail.css";
@@ -92,10 +14,7 @@ export default function EventDetail() {
     phone: ''
   });
   
-  const goHome = () => {
-    navigate("/");
-  };
-
+ 
   const registerEvent = () => {
     setShowModal(true);
   };
@@ -134,10 +53,8 @@ export default function EventDetail() {
   return (
     <div>
       <div id="eventDetail" className="event-detail">
+        <div className="gap"></div>
         <div className="detail-container">
-          <button className="back-btn" onClick={goHome}>
-            ← Back to Home
-          </button>
           <div className="detail-header glass">
             <div className="detail-banner" id="detailBanner">
               {eventData.icon}
@@ -157,7 +74,7 @@ export default function EventDetail() {
 
           <div className="detail-content glass">
             <div className="detail-description" id="detailDescription">
-              Full event description will appear here...
+              {eventData.fullDescription}
             </div>
 
             <div className="map-container">
